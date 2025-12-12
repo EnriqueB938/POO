@@ -1,0 +1,17 @@
+Implementar la clase vehiculo que tiene un campo tipo de tipo string, un campo precio de tipo doble y un campo propietario
+de tipo String.
+    -Constructor parametrizado donde el tipo es obligatorio y el resto opcional (precio = 0.0 y propietario = "Desconocido")
+    -Getters y Setters:
+    setPrecio(), será bool, precio no puede ser negativo, si lo es no se modifica y devuelve false y sino se modifcia y 
+    devuelve true
+
+Clase coche, que deriva de vehiculo y además tiene un campo cilindrada de tipo int(por ejemplo 1500), y un campo matricula
+de tipo string.
+
+    -Constructor parametrizado donde la matricula es obligatoria junto al tipo, el resto será opcional con los valores
+    por defecto cilindrada = 1500.
+
+    -Getter y setters
+        Observador de matricula por referencia.
+        -Modifciador de matricula controla que no tome el valor de cadena vacia y este será de tipo bool, como el setPrecio
+        de antes.

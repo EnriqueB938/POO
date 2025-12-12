@@ -1,0 +1,20 @@
+Vamos a programar la clase producto, va a estar compuesto por los siguientes atributos:
+string codigode referencia;
+string nombre;
+float precio;
+Constructor vacio, constructor parametrizado, observadores y modificadores, controlar que el precio no sea negativo
+y que el observador del nombre sea por referencia. Hay que añadir un metodo llamado print, que devuelve una cadena con toda la info del producto
+
+Programar la clase martillo,va a estar compuesto por los siguientes atributos:
+string codigode referencia; (heredado)
+string nombre; (heredado)
+float precio; (heredado)
+int longitud;
+float peso;
+string marca;
+Constructores vacios y parametrizados, observadores y modificadores, observadores la marca del martillo por referencia y
+para los modificadores la marca no puede ser una cadena vacia y que la longitud y el peso no pueden ser negativos
+Hacemos un metodo print, devuleve por referencia una cadena, con los siguientes datos:
+"Nombre" de la "marca" pesa "kg" y su precio es de "x" euros.
+
+Un main que pruebe todo.

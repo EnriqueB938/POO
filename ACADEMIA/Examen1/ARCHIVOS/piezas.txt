@@ -1,0 +1,6 @@
+1 Tornillo
+0 0
+2 Tuerca
+0 0
+3 Arandela
+0 0
