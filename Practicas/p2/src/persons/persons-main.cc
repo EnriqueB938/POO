@@ -17,28 +17,30 @@ int main() {
     int director_since;
 
 
-    cout << "Introduce nombre de la persona: ";
+    cout << "Introduce el nombre de la persona: ";
     cin >> name;
-    cout << "Introduce año de nacimiento: ";
+    cout << "Introduce el año de nacimiento: ";
     cin >> birth_year;
     p.setName(name);
     p.setBirth_Year(birth_year);
-
     
-    cout << "Introduce nombre del ciclista: ";
+    cout << "\n" << endl;
+
+    cout << "Introduce el nombre del ciclista: ";
     cin >> name;
-    cout << "Introduce año de nacimiento: ";
+    cout << "Introduce el año de nacimiento: ";
     cin >> birth_year;
-    cout << "Introduce equipo del ciclista: ";
+    cout << "Introduce el equpio del ciclista: ";
     cin >> team;
-    cout << "Introduce ID del ciclista: ";
+    cout << "Introduce el ID del ciclista: ";
     cin >> cyclist_id;
     c.setName(name);
     c.setBirth_Year(birth_year);
     c.setTeam(team);
     c.setCyclist_Id(cyclist_id);
 
-    
+    cout << "\n" << endl; 
+
     cout << "Introduce nombre del director: ";
     cin >> name;
     cout << "Introduce año de nacimiento: ";
@@ -55,19 +57,24 @@ int main() {
     d.setUci_License_Id(uci_license_id);
     d.setDirector_Since(director_since);
 
+    cout << "\n" << endl;
 
-    cout << "nombre de la persona: " << p.getName() << endl;
+    cout << "Nombre de la persona: " << p.getName() << endl;
     cout<< "Año de nacimiento: " << p.getBirth_Year() << endl;
+
+    cout << "\n" << endl;
 
     cout << "Nombre del ciclista: " << c.getName() << endl;
     cout<< "Año de nacimiento del ciclista: " << c.getBirth_Year() << endl;
     cout << "Nombre del equipo: " << c.getTeam() <<endl;
     cout<< "ID del ciclista: " << c.getCyclist_Id() << endl;
 
+    cout << "\n" << endl;
+
     cout << "Nombre del director: " << d.getName() << endl;
     cout << "Año de  nacimiento del director: " << d.getBirth_Year() << endl;
     cout << "Nombre del equipo: " << d.getTeam() << endl;
-    cout << "Licencia UCI: " << d.getUci_License_Id() << endl;
+    cout << "Licencia UC del director: " << d.getUci_License_Id() << endl;
     cout << "Es director desde: " << d.getDirector_Since() << endl;
 
     return 0;

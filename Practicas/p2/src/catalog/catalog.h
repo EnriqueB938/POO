@@ -20,7 +20,7 @@ class CyclistCatalog
 
     public:
 
-bool CyclistCatalog::Load(const std::string& path) 
+    bool Load(const std::string& path) 
     {
         Cyclist c;
         std::string name, birth_s, id, team;
@@ -60,16 +60,6 @@ bool CyclistCatalog::Load(const std::string& path)
 
     vector<Cyclist> Data()
     {
-        ifstream fich (cyclist.csv);
-        if(fich.is_open())
-        {
-            Cyclist c;
-            for(auto it = cyclist_.begin(); it != cyclist_.end(); it++)
-            {
-                cyclist_.push_back(c);
-            }
-            fich.close();
-        }
         return cyclist_;
     }
 };
@@ -82,7 +72,7 @@ class DirectorCatalog
 
     public:
 
-bool DirectorCatalog::Load(const std::string& path) 
+    bool Load(const std::string& path) 
     {
         Director d;
         std::string name, birth_s, id, team, director_s;
@@ -126,16 +116,6 @@ bool DirectorCatalog::Load(const std::string& path)
 
     vector<Director> Data()
     {
-        ifstream fich (directors.csv);
-        if(fich.is_open())
-        {
-            Director d;
-            for(auto it = directors_.begin(); it != directors_.end(); it++)
-            {
-                directors_.push_back(d);
-            }
-            fich.close();
-        }
         return directors_;
     }
 };
