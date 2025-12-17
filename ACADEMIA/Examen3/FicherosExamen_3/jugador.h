@@ -2,6 +2,7 @@
 #define JUGADOR_H
 
 #include <string>
+#include <ostream>
 using namespace std;
 #include "persona.h"
 
@@ -12,7 +13,7 @@ class Jugador : public Persona
 
     public:
 
-    Jugador(string nombre, string puesto, string direccion = "XX", string DNI = "XX")
+    Jugador(string nombre, string puesto, string direccion = "XX", string DNI = "XX") : Persona(nombre, direccion, DNI)
     {
         if(puesto == "base" || puesto == "alero" || puesto == "escolta" || puesto == "pivot" || puesto == "ala-pivot")
         {
@@ -21,7 +22,7 @@ class Jugador : public Persona
         puesto_ = "Banquillo";
     }
 
-    Jugador(const Jugador &p)
+    Jugador(const Jugador &p) : Persona(p)
     {
         puesto_ = p.puesto_;
     }
@@ -46,6 +47,12 @@ class Jugador : public Persona
         puesto_ = per.puesto_;
 
         return *this;
+    }
+
+    friend ostream &operator<<(ostream &flujo, Jugador p) // cout << p;
+    {
+        flujo << p.getNombre() << ";" << p.puesto_ << ";" << p.getDireccion() << ";" << p.getDNI() << endl;
+        return flujo;
     }
 
     
