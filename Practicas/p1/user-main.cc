@@ -4,7 +4,7 @@ using namespace std;
 #include <string>
 
 
-User ReadUserFromConsole()
+int main()
 {
     string id;
     string surname;
@@ -13,6 +13,7 @@ User ReadUserFromConsole()
     int d;
     int m;
     int y;
+    bool complete;
 
     cout << "Introduce ID: ";
     getline(cin, id);
@@ -35,14 +36,23 @@ User ReadUserFromConsole()
     cout << "Introduce año de nacimiento: ";
     cin >> y;
 
+    cout << "¿Los datos estan completos? (1 para si, 0 para no): ";
+    cin >> complete;
+
+    if(complete == 1)
+    {
+        complete = true;
+    }
+    else
+    {
+        complete = false;
+    }
+
     cin.ignore(); 
 
-    User u(id, surname, name, nationality, d, m, y);
-    return u;
-}
+    User u(id, surname, name, nationality, d, m, y, complete);
 
-void PrintUserToConsole(User u)
-{
+
     cout << "\n--- Datos del Usuario ---\n";
     cout << "ID: " << u.getId() << endl;
     cout << "Apellidos: " << u.getSurname() << endl;
@@ -51,18 +61,7 @@ void PrintUserToConsole(User u)
     cout << "Dia de nacimiento: " << u.getDay() << endl;
     cout << "Mes de nacimiento: " << u.getMonth() << endl;
     cout << "Año de nacimiento: " << u.getYear() << endl;
-}
 
-int main()
-{
-    cout << "[1] Creando objeto User vacio...\n";
-    User u("temp");  
-
-    cout << "[2] Leyendo datos desde teclado...\n";
-    u = ReadUserFromConsole();
-
-    cout << "[3] Mostrando datos del usuario...\n";
-    PrintUserToConsole(u);
 
     return 0;
 }
