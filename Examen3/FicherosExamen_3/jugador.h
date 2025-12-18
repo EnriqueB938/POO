@@ -19,7 +19,11 @@ class Jugador : public Persona
         {
             puesto_ = puesto;
         }
-        puesto_ = "Banquillo";
+        else
+        {
+            puesto_ = "Ninguno";
+        }
+
     }
 
     Jugador(const Jugador &p) : Persona(p)
@@ -45,18 +49,18 @@ class Jugador : public Persona
     Jugador &operator=(Jugador per)
     {
         puesto_ = per.puesto_;
+        setDireccion(per.getDireccion());
+        setDNI(per.getDNI());
+        setNombre(per.getNombre());
 
         return *this;
     }
 
     friend ostream &operator<<(ostream &flujo, Jugador p) // cout << p;
     {
-        flujo << p.getNombre() << ";" << p.puesto_ << ";" << p.getDireccion() << ";" << p.getDNI() << endl;
+        flujo << p.getNombre() << ";" << p.getDireccion() << ";" << p.getDNI() << ";" << p.puesto_ << endl;
         return flujo;
     }
-
-    
-
 
 };
 
