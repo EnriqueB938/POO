@@ -1,1 +1,0 @@
-/usr/bin/c++ -rdynamic "CMakeFiles/persons-main.dir/persons-main.o" -o persons-main  libpersons.a 

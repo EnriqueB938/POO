@@ -1,3 +1,0 @@
-/home/quiconcio/poo/POO/Practicas/p1/build/CMakeFiles/user-main.dir
-/home/quiconcio/poo/POO/Practicas/p1/build/CMakeFiles/edit_cache.dir
-/home/quiconcio/poo/POO/Practicas/p1/build/CMakeFiles/rebuild_cache.dir
