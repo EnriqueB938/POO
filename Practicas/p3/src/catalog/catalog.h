@@ -20,7 +20,7 @@ class CyclistCatalog
 
     public:
 
-bool CyclistCatalog::Load(const std::string& path) 
+    bool Load(const std::string& path) 
     {
         Cyclist c;
         std::string name, birth_s, id, team;
@@ -43,10 +43,10 @@ bool CyclistCatalog::Load(const std::string& path)
             if (!std::getline(iss, id, ',')) continue;
             if (!std::getline(iss, team)) continue;
             birthyear = std::stoi(birth_s);
-            c.setName(name);
-            c.setBirth_Year(birthyear);
-            c.setCyclist_Id(id);
-            c.setTeam(team);
+            c.SetName(name);
+            c.SetBirthYear(birthyear);
+            c.SetCyclistId(id);
+            c.SetTeam(team);
             cyclist_.push_back(c); // se hace una copia al final del vector
         }
     return !cyclist_.empty();
@@ -60,16 +60,6 @@ bool CyclistCatalog::Load(const std::string& path)
 
     vector<Cyclist> Data()
     {
-        ifstream fich (cyclist.csv);
-        if(fich.is_open())
-        {
-            Cyclist c;
-            for(auto it = cyclist_.begin(); it != cyclist_.end(); it++)
-            {
-                cyclist_.push_back(c);
-            }
-            fich.close();
-        }
         return cyclist_;
     }
 
@@ -77,9 +67,9 @@ bool CyclistCatalog::Load(const std::string& path)
     {
         for(auto it = cyclist_.begin(); it != cyclist_.end(); it++)
         {
-            if(it-> getCyclist_Id() == cyclist_id)
+            if(it-> GetCyclistId() == cyclist_id)
             {
-                return it-> getTeam();
+                return it-> GetTeam();
             }
         }
         printf("El equipo no ha sido encontrado\n");
@@ -90,7 +80,7 @@ bool CyclistCatalog::Load(const std::string& path)
     {
         for(auto it = cyclist_.begin(); it != cyclist_.end(); it++)
         {
-            if(it->getTeam() == team)
+            if(it->GetTeam() == team)
             {
                 cyclist_.push_back(*it);
             }
@@ -105,19 +95,19 @@ bool CyclistCatalog::Load(const std::string& path)
             return cyclist_;
         }
 
-        int joven = cyclist_.begin()-> getBirth_Year();
+        int joven = cyclist_.begin()-> GetBirthYear();
 
         for(auto it = cyclist_.begin(); it != cyclist_.end(); it++)
         {
-            if(it-> getBirth_Year() > joven)  
+            if(it-> GetBirthYear() > joven)  
             {
-                joven = it-> getBirth_Year();
+                joven = it-> GetBirthYear();
             }
         }
 
         for(auto it = cyclist_.begin(); it != cyclist_.end(); it++)
         {
-            if(it-> getBirth_Year() == joven)
+            if(it-> GetBirthYear() == joven)
             {
                 cyclist_.push_back(*it);
             }
@@ -135,7 +125,7 @@ class DirectorCatalog
 
     public:
 
-bool DirectorCatalog::Load(const std::string& path) 
+    bool Load(const std::string& path) 
     {
         Director d;
         std::string name, birth_s, id, team, director_s;
@@ -161,11 +151,11 @@ bool DirectorCatalog::Load(const std::string& path)
             if (!std::getline(iss, director_s))continue;
             birthyear = std::stoi(birth_s);
             director_since = std::stoi(director_s);
-            d.setName(name);
-            d.setBirth_Year(birthyear);
-            d.setUci_License_Id(id);
-            d.setTeam(team);
-            d.setDirector_Since(director_since);
+            d.SetName(name);
+            d.SetBirthYear(birthyear);
+            d.SetUciLicenseId(id);
+            d.SetTeam(team);
+            d.SetDirectorSince(director_since);
             directors_.push_back(d); // se hace una copia al final del vector
         }
     return !directors_.empty();
@@ -179,16 +169,6 @@ bool DirectorCatalog::Load(const std::string& path)
 
     vector<Director> Data()
     {
-        ifstream fich (directors.csv);
-        if(fich.is_open())
-        {
-            Director d;
-            for(auto it = directors_.begin(); it != directors_.end(); it++)
-            {
-                directors_.push_back(d);
-            }
-            fich.close();
-        }
         return directors_;
     }
 };

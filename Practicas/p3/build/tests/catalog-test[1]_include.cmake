@@ -1,0 +1,5 @@
+if(EXISTS "/home/quiconcio/poo/POO/Practicas/p3/build/tests/catalog-test[1]_tests.cmake")
+  include("/home/quiconcio/poo/POO/Practicas/p3/build/tests/catalog-test[1]_tests.cmake")
+else()
+  add_test(catalog-test_NOT_BUILT catalog-test_NOT_BUILT)
+endif()

@@ -1,0 +1,5 @@
+if(EXISTS "/home/quiconcio/poo/POO/Practicas/p3/build/tests/persons-test[1]_tests.cmake")
+  include("/home/quiconcio/poo/POO/Practicas/p3/build/tests/persons-test[1]_tests.cmake")
+else()
+  add_test(persons-test_NOT_BUILT persons-test_NOT_BUILT)
+endif()

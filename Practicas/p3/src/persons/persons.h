@@ -24,22 +24,22 @@ class Person
         birth_year_ = birth_year;
     }
 
-    string getName()
+    string GetName()
     {
         return name_;
     }
 
-    int getBirth_Year()
+    int GetBirthYear()
     {
         return birth_year_;
     }
 
-    void setName(string name)
+    void SetName(string name)
     {
         name_ = name;
     }
 
-    void setBirth_Year(int birth_year)
+    void SetBirthYear(int birth_year)
     {
         birth_year_ = birth_year;
     }
@@ -60,28 +60,28 @@ class Cyclist : public Person
         cyclist_id_ = "UNKNOWN";
     }
 
-    Cyclist(string team, string cyclist_id, string name, int birth_year) : Person(name, birth_year)
+    Cyclist(string name, int birth_year, string team, string cyclist_id) : Person(name, birth_year)
     {
         team_ = team;
         cyclist_id_ = cyclist_id;
     }
 
-    string getTeam()
+    string GetTeam()
     {
         return team_;
     }
 
-    string getCyclist_Id()
+    string GetCyclistId()
     {
         return cyclist_id_;
     }
 
-    void setTeam(string team)
+    void SetTeam(string team)
     {
         team_ = team;
     }
 
-    void setCyclist_Id(string cyclist_id)
+    void SetCyclistId(string cyclist_id)
     {
         cyclist_id_ = cyclist_id;
     }
@@ -104,39 +104,39 @@ class Director : public Person
         director_since_ = -1;
     }
 
-    Director(string team, string uci_license_id, int director_since, string name, int birth_year) : Person(name, birth_year)
+    Director(string name, int birth_year, string team, string uci_license_id, int director_since) : Person(name, birth_year)
     {
         team_ = team;
         uci_license_id_ = uci_license_id;
         director_since_ = director_since;
     }
 
-    string getTeam()
+    string GetTeam()
     {
         return team_;
     }
 
-    string getUci_License_Id()
+    string GetUciLicenseId()
     {
         return uci_license_id_;
     }
 
-    int getDirector_Since()
+    int GetDirectorSince()
     {
         return director_since_;
     }
 
-    void setTeam(string team)
+    void SetTeam(string team)
     {
         team_ = team;
     }
 
-    void setUci_License_Id(string uci_license_id)
+    void SetUciLicenseId(string uci_license_id)
     {
         uci_license_id_ = uci_license_id;
     }
 
-    void setDirector_Since(int director_since)
+    void SetDirectorSince(int director_since)
     {
         director_since_ = director_since;
     }
